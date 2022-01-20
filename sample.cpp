@@ -1,14 +1,8 @@
+#include <stdio.h>
 #include <iostream>
-using namespace std;
-
-struct Student{
-    int year;
-    int num;
-};
 
 int main (){
-    struct Student Tarou;
-    Tarou.year = 10;
-    cout << Tarou.year << "\n";
+    printf("関数を使った出力\n");
+    std::cout << "ストリームを使った出力\n";
     return 0;
 }
