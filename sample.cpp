@@ -2,9 +2,10 @@
 using namespace std;
 
 int main (){
-    int array[] = {10, 20, 30};
-    cout << array[0] << "\n";
-    cout << array[1] << "\n";
-    cout << array[2] << "\n";
+    int array[5] = {10, 20, 30, 40, 50};
+    int i;
+    for(i = 0; i < 5; i++){
+        cout << i << "番目:" << array[i] << "\n";
+    }
     return 0;
 }
