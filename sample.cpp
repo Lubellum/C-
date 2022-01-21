@@ -2,11 +2,11 @@
 using namespace std;
 
 int main (){
-    int apple = 10;
-    apple += 5;
-    apple -= 5;
-    apple *= 5;
-    apple /= 5;
-    cout << apple << "\n";
+    int x = 10;
+    int y = 10;
+    x++;
+    y--;
+    cout << "xの値:" << x << "\n";
+    cout << "yの値:" << y << "\n";
     return 0;
 }
