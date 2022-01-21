@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
 
-int main (){
-    int num;
-    int array[num];
+void keisan(int x[]){
     int i;
-    cout << "要素数はいくつですか？";
-    cin >> num;
-    for(i = 0; i < num; i++){
-        cin >> array[i];
+    int sum = 0;
+    for(i = 0; i < 3; i++){
+        sum += x[i];
     }
-    for(i = 0; i < num; i++){
-        cout << i + 1 << "番目：" << array[i] << "\n";
-    }
-    return 0 ;
+    cout << "平均点は" << sum / 3 << "です\n";
+}
+
+int main (){
+    int array[3] = {70, 85, 95};
+    keisan(array);
+    return 0;
 }
