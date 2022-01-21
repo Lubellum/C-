@@ -1,21 +1,42 @@
 #include <stdio.h>
 
-struct Fruits{
-    int apple;
-    int orange;
-    int banana;
+struct Test{
+    char name[32];
+    int kokugo;
+    int sansu;
+    int eigo;
 };
 
-void price (struct Fruits store1);
+struct Test student[3] = {
+    {"太郎", 40, 50, 60},
+    {"二郎", 55, 65, 70},
+    {"三郎", 70, 80, 90}
+};
+
+void line (void);
+void show (void);
 
 int main (void){
-    struct Fruits store1 = {100, 200, 300};
-    price(store1);
-    return 0;
+    printf("%10s %10s %10s %10s\n", "名前", "国語", "算数", "英語");
+    line();
+    show();
+    line();
 }
 
-void price (struct Fruits store1){
-    printf("りんごの金額：%d\n", store1.apple);
-    printf("オレンジの金額：%d\n", store1.orange);
-    printf("バナナの金額：%d\n", store1.banana);
+void line (void){
+    int i;
+    for(i = 0; i < 50; i++){
+        printf("-");
+    }
+    printf("\n");
+    return;
+}
+
+void show (void){
+    int i;
+    for(i = 0; i < 3; i++){
+        printf("%8s %8d %8d %8d\n", 
+        student[i].name, student[i].kokugo, student[i].sansu, student[i].eigo);
+    }
+    return;
 }
