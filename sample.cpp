@@ -1,10 +1,15 @@
 #include <stdio.h>
 
-int main (){
+void keisan(int *x){
+    *x = 25;
+}
+
+int main (void){
     int apple = 10;
-    int *p;
-    p = &apple;
-    printf("%d\n", *p);
-    printf("%p", p);
-    return 0;
+    printf("1回目:%d\n", apple);
+
+    keisan(&apple);
+
+    printf("書き換えました\n");
+    printf("2回目：%d\n", apple);
 }
