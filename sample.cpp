@@ -2,12 +2,14 @@
 using namespace std;
 
 int main (){
-    int num;
-    cout << "数値を入力してください";
-    cin >> num;
-    if(num == 10)
-        cout << "10と同じです\n";
+    int year;
+    cout << "年齢を入力してください";
+    cin >> year;
+    if(year <= 3)
+        cout << "無料です\n";
+    else if(year <= 20)
+        cout << "1000円です\n";
     else
-        cout << "10ではありません\n";
+        cout << "2000円です\n";
     return 0;
 }
