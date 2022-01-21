@@ -1,17 +1,16 @@
 #include <stdio.h>
-
-void keisan(int n1, int n2, int *tasu, int *hiku){
-    *tasu = n1 + n2;
-    *hiku = n1 - n2;
-}
+struct Fruits{
+    char name[128];
+    int price;
+    int zaiko;
+};
 
 int main (void){
-    int num1 = 30;
-    int num2 = 10;
-    int tasizan = 0;
-    int hikizan = 0;
-    keisan(num1, num2, &tasizan, &hikizan);
-    printf("足し算の結果:%D\n", tasizan);
-    printf("引き算の結果:%D\n", hikizan);
+    struct Fruits store = {"apple", 150, 50};
+    struct Fruits *p;
+    p = &store;
+    printf("名前：%s\n", p->name);
+    printf("金額：%d\n", p->price);
+    printf("在庫：%d\n", p->zaiko);
     return 0;
 }
