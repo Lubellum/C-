@@ -5,7 +5,9 @@ int main (){
     int num;
     cout << "数値を入力してください";
     cin >> num;
-    if(num >= 5 && num <= 10)
-        cout << "5と10の間にあります\n";
+    if(num == 10){
+        cout << "１０と同じです\n";
+        cout << "正解です\n";
+    }
     return 0;
 }
