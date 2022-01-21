@@ -1,19 +1,13 @@
 #include <iostream>
 using namespace std;
 
-int keisan(int a){
-    int goukei = a * 200;
-    return goukei;
-}
-
 int main (){
-    int apple;
-    cout << "りんごの個数は？";
-    cin >> apple;
-    int judge = keisan(apple);
-    if(judge > 3000)
-        cout << "予算オーバーです\n";
-    else
-        cout << "購入出来ます\n";
+    int array[3];
+    array[0] = 10; 
+    array[1] = 20;
+    array[2] = 30;
+    cout << array[0] << "\n";
+    cout << array[1] << "\n";
+    cout << array[2] << "\n";
     return 0;
 }
