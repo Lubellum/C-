@@ -1,13 +1,14 @@
 #include <iostream>
 using namespace std;
 
+void hello(){
+    cout << "Hello World\n";
+}
+
 int main (){
-    int num = 10;
-    do{
-        cout << "メッセージ\n";
-    }while(num < 5);
-    while(num < 5){
-        cout << "メッセージ\n";
-    }
+    hello();
+    hello();
+    hello();
+    hello();
     return 0;
 }
