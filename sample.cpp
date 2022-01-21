@@ -1,15 +1,13 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 int main (){
-    int i, j;
-    for(i = 1; i <= 9; i++){
-        cout << i << "の段:";
-        for(j = 1; j <= 9; j++){
-            cout << setw(5) << i * j;
-        }
-        cout << "\n";
+    int num = 1;
+    int count = 0;
+    while(num < 1000){
+        num *= 2;
+        count++;
+        cout << count << "回目:" << num << "\n";
     }
-    return 0;
+    cout << count << "回目で1000を超えます";
 }
