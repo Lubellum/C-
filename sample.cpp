@@ -1,18 +1,19 @@
 #include <iostream>
 using namespace std;
 
-void keisan(int a, int b){
-    int goukei;
-    goukei = (300*a) + (200*b);
-    cout << "合計金額は" << goukei << "円です\n";
+int keisan(int a){
+    int goukei = a * 200;
+    return goukei;
 }
 
 int main (){
-    int apple, orange;
+    int apple;
     cout << "りんごの個数は？";
     cin >> apple;
-    cout << "オレンジの個数は？";
-    cin >> orange;
-    keisan(apple, orange);
+    int judge = keisan(apple);
+    if(judge > 3000)
+        cout << "予算オーバーです\n";
+    else
+        cout << "購入出来ます\n";
     return 0;
 }
