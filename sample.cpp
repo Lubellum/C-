@@ -2,22 +2,9 @@
 using namespace std;
 
 int main (){
-    int num;
-    cout << "番号を入力してください";
-    cin >> num;
-    switch (num){
-        case 1:
-            cout << "ハリー\n";
-            break;
-        case 2:
-            cout << "ロン\n";
-            break;
-        case 3:
-            cout << "ハーマイオニー\n";
-            break;
-        default:
-            cout << "マルフォイ\n";
-            break;
+    int i;
+    for(i = 0; i < 5; i++){
+        cout << i + 1 << "回目:メッセージ\n";
     }
     return 0;
 }
