@@ -2,12 +2,12 @@
 using namespace std;
 
 int main (){
-    int num = 1;
-    int count = 0;
-    while(num < 1000){
-        num *= 2;
-        count++;
-        cout << count << "回目:" << num << "\n";
+    int num = 10;
+    do{
+        cout << "メッセージ\n";
+    }while(num < 5);
+    while(num < 5){
+        cout << "メッセージ\n";
     }
-    cout << count << "回目で1000を超えます";
+    return 0;
 }
