@@ -2,7 +2,9 @@
 using namespace std;
 
 int main (){
-    cout << 1000 << "\n";
-    cout << "こちらは" << 1000 << "円です\n";
+    cout << 10 + 3 << "\n";
+    cout << 10 - 3 << "\n";
+    cout << 10 * 3 << "\n";
+    cout << 10 / 3 << "\n";
     return 0;
 }
