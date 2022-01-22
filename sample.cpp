@@ -1,14 +1,14 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-typedef struct{
-    int apple;
-    int orange;
-    int banana;
-}Fruits;
+struct Student{
+    int year;
+    int num;
+};
 
-int main (void){
-    Fruits store;
-    store.apple = 100;
-    printf("リンゴの金額：%d円", store.apple);  
+int main (){
+    struct Student Tarou;
+    Tarou.year = 10;
+    cout << Tarou.year << "\n";
     return 0;
 }
