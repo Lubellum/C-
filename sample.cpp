@@ -6,10 +6,15 @@ class Student{
         int num;
 };
 
+// void show(Student x){
+//     cout << x.num << "\n";
+// }
+
 int main (){
-    Student Tarou, *p;
-    p = &Tarou;
-    (*p).num = 10;
+    Student Tanaka;
+    Tanaka.num = 10;
+    Student *p;
+    p = &Tanaka;
     cout << (*p).num << "\n";
     return 0;
 }
