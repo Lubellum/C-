@@ -12,10 +12,13 @@ void Student::show(){
 }
 
 int main (){
-    Student Yamada, Hanako;
-    Yamada.num = 10;
-    Hanako.num = 12;
-    Yamada.show();
-    Hanako.show();
+    int i;
+    Student array[3];
+    array[0].num = 10;
+    array[1].num = 11;
+    array[2].num = 12;
+    for(i = 0; i < 3; i++){
+        array[i].show();
+    }
     return 0;
 }
