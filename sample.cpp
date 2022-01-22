@@ -2,19 +2,20 @@
 using namespace std;
 
 class Student{
-    public:
+    private:
         int num;
+    public:
+        void setNum(int x);
+        
 };
 
-// void show(Student x){
-//     cout << x.num << "\n";
-// }
+void Student::setNum(int x){
+    num = x;
+    cout << num << "\n";
+}
 
 int main (){
     Student Tanaka;
-    Tanaka.num = 10;
-    Student *p;
-    p = &Tanaka;
-    cout << (*p).num << "\n";
+    Tanaka.setNum(100);
     return 0;
 }
