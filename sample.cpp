@@ -1,14 +1,21 @@
 #include <iostream>
-#include "sample.h"
 using namespace std;
+
+class Student{
+    public:
+        int num;
+        void show();
+};
 
 void Student::show(){
     cout << "番号：" << num << "\n";
 }
 
 int main (){
-    Student Tarou;
-    Tarou.num = 24;
-    Tarou.show();
+    Student Yamada, Hanako;
+    Yamada.num = 10;
+    Hanako.num = 12;
+    Yamada.show();
+    Hanako.show();
     return 0;
 }
