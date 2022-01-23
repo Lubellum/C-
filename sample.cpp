@@ -1,16 +1,18 @@
 #include <iostream>
 using namespace std;
 
-class NewClass{
+class Student{
     public:
-        NewClass();
+        int num;
+        Student();
 };
 
-NewClass::NewClass(){
-    cout << "オブジェクトを作るだけで発動\n";
+Student::Student(){
+    num = 10;
 }
 
 int main (){
-    NewClass obj;
+    Student Tarou;
+    cout << Tarou.num << "\n";
     return 0;
 }
