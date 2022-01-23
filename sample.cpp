@@ -1,18 +1,18 @@
 #include <iostream>
 using namespace std;
 
-class Student{
+class NewClass{
     public:
         int num;
-        Student();
+        NewClass(int x);
 };
 
-Student::Student(){
-    num = 10;
+NewClass::NewClass(int x){
+    num = x;
 }
 
 int main (){
-    Student Tarou;
-    cout << Tarou.num << "\n";
+    NewClass obj(100);
+    cout << obj.num << "\n";
     return 0;
 }
