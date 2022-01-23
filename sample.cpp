@@ -6,16 +6,23 @@ class Student{
         int num;
     public:
         void setNum(int x);
-        
+        int getNum();
 };
 
 void Student::setNum(int x){
-    num = x;
-    cout << num << "\n";
+    if(x > 0 && x < 100)
+        num = x;
+    else
+        num = 0;
 }
 
-int main (){
-    Student Tanaka;
-    Tanaka.setNum(100);
+int Student::getNum(){
+    return num;
+}
+
+int main (void){
+    Student Tarou;
+    Tarou.setNum(15);
+    cout << Tarou.getNum() << "\n";
     return 0;
 }
