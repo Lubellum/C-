@@ -1,28 +1,16 @@
 #include <iostream>
 using namespace std;
 
-class Student{
-    private:
-        int num;
+class NewClass{
     public:
-        void setNum(int x);
-        int getNum();
+        NewClass();
 };
 
-void Student::setNum(int x){
-    if(x > 0 && x < 100)
-        num = x;
-    else
-        num = 0;
+NewClass::NewClass(){
+    cout << "オブジェクトを作るだけで発動\n";
 }
 
-int Student::getNum(){
-    return num;
-}
-
-int main (void){
-    Student Tarou;
-    Tarou.setNum(15);
-    cout << Tarou.getNum() << "\n";
+int main (){
+    NewClass obj;
     return 0;
 }
