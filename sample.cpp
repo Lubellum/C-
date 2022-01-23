@@ -3,22 +3,19 @@ using namespace std;
 
 class NewClass{
     public:
-        int num;
         NewClass();
-        NewClass(int x);
+        ~NewClass();
 };
 
 NewClass::NewClass(){
-    cout << "番号が入力されていません\n";
+    cout << "コンストラクタです\n";
 }
 
-NewClass::NewClass(int x){
-    num = x;
-    cout << "番号：" << num << "\n";
+NewClass::~NewClass(){
+    cout << "デストラクタです\n";
 }
 
 int main (){
-    NewClass obj(14);
-    NewClass obj2;
+    NewClass obj;
     return 0;
 }
