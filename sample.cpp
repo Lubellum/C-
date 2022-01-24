@@ -4,14 +4,19 @@ using namespace std;
 class NewClass{
     public:
         NewClass();
+        NewClass(const NewClass &obj);
 };
 
 NewClass::NewClass(){
     cout << "コンストラクタ\n";
 }
 
-int main (){
-    NewClass obj1;
-    NewClass obj2 = obj1;
-    return 0;
+NewClass::NewClass(const NewClass &obj){
+    cout << "コピーコンストラクタ\n";
 }
+
+int main (){
+    NewClass apple;
+    NewClass orange = apple;
+    return 0;
+ }
