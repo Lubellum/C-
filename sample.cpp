@@ -2,25 +2,22 @@
 using namespace std;
 
 class OldClass{
-    public:
+    protected:
         int num;
-        void show();
 };
-
-void OldClass::show(){
-    cout << num << "\n";
-}
 
 class NewClass : public OldClass{
     public:
-        int num2;
+        void setNum(int x);
 };
+
+void NewClass::setNum(int x){
+    num = x;
+    cout << num << "\n";
+}
 
 int main (){
     NewClass obj;
-    obj.num = 10;
-    obj.num2 = 20;
-    obj.show();
-    cout << obj.num2 << "\n";
+    obj.setNum(10);
     return 0;
  }
