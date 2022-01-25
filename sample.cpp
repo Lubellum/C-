@@ -1,15 +1,25 @@
 #include <iostream>
 using namespace std;
 
-class Student{
+class Mother{
     public:
-        static int grade;
+        int num1;
 };
 
-int Student::grade = 6;
+class Father{
+    public:
+        int num2;
+};
+
+class Child : public Mother, public Father{
+
+};
 
 int main (){
-    Student taraou;
-    cout << taraou.grade << "\n";
+    Child obj;
+    obj.num1 = 10;
+    obj.num2 = 20;
+    cout << obj.num1 << "\n";
+    cout << obj.num2 << "\n";
     return 0;
  }
