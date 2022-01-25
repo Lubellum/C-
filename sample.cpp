@@ -1,14 +1,21 @@
 #include <iostream>
 using namespace std;
 
-class Mother{
+class Human{
     public:
-        int num1;
+        void show();
 };
 
-class Father{
-    public:
-        int num2;
+void Human::show(){
+    cout << "共通の基本クラス\n";
+}
+
+class Father : public virtual Human{
+
+};
+
+class Mother : public virtual Human{
+
 };
 
 class Child : public Mother, public Father{
@@ -17,9 +24,6 @@ class Child : public Mother, public Father{
 
 int main (){
     Child obj;
-    obj.num1 = 10;
-    obj.num2 = 20;
-    cout << obj.num1 << "\n";
-    cout << obj.num2 << "\n";
+    obj.show();
     return 0;
  }
