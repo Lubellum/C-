@@ -3,11 +3,16 @@ using namespace std;
 
 class OldClass{
     public:
-        OldClass( );
+        OldClass();
+        OldClass(int x);
 };
 
 OldClass::OldClass(){
-    cout << "基本クラスのコンストラクタ\n"; 
+    cout << "引数がないパターン\n";
+}
+
+OldClass::OldClass(int x){
+    cout << x << ": 引数があるパターン\n";
 }
 
 class NewClass : public OldClass{
@@ -15,7 +20,7 @@ class NewClass : public OldClass{
         NewClass();
 };
 
-NewClass::NewClass(){
+NewClass::NewClass() : OldClass(0){
     cout << "派生クラスのコンストラクタ\n";
 }
 
