@@ -2,22 +2,24 @@
 using namespace std;
 
 class OldClass{
-    protected:
-        int num;
+    public:
+        OldClass( );
 };
+
+OldClass::OldClass(){
+    cout << "基本クラスのコンストラクタ\n"; 
+}
 
 class NewClass : public OldClass{
     public:
-        void setNum(int x);
+        NewClass();
 };
 
-void NewClass::setNum(int x){
-    num = x;
-    cout << num << "\n";
+NewClass::NewClass(){
+    cout << "派生クラスのコンストラクタ\n";
 }
 
 int main (){
     NewClass obj;
-    obj.setNum(10);
     return 0;
  }
