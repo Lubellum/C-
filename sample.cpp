@@ -1,30 +1,15 @@
 #include <iostream>
 using namespace std;
 
-class OldClass{
+class Student{
     public:
-        OldClass();
-        OldClass(int x);
+        static int grade;
 };
 
-OldClass::OldClass(){
-    cout << "引数がないパターン\n";
-}
-
-OldClass::OldClass(int x){
-    cout << x << ": 引数があるパターン\n";
-}
-
-class NewClass : public OldClass{
-    public:
-        NewClass();
-};
-
-NewClass::NewClass() : OldClass(0){
-    cout << "派生クラスのコンストラクタ\n";
-}
+int Student::grade = 6;
 
 int main (){
-    NewClass obj;
+    Student taraou;
+    cout << taraou.grade << "\n";
     return 0;
  }
