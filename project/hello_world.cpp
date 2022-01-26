@@ -2,6 +2,7 @@
 using namespace std;
 
 int main (){
-  cout << "Hello World!\n";
+  cout << "\x1b[41m";
+  cout << "Hello World!";
   return 0;
 }
