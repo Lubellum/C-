@@ -1,29 +1,15 @@
 #include <iostream>
 using namespace std;
 
-class Human{
-    public:
-        void show();
-};
-
-void Human::show(){
-    cout << "共通の基本クラス\n";
+void nibai(int x){
+    cout << x * 2 << "\n";
 }
 
-class Father : public virtual Human{
-
-};
-
-class Mother : public virtual Human{
-
-};
-
-class Child : public Mother, public Father{
-
-};
+void nibai(double y){
+    cout << y * 2 << "\n";
+}
 
 int main (){
-    Child obj;
-    obj.show();
+    nibai(3.14);
     return 0;
  }
