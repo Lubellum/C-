@@ -1,18 +1,22 @@
 #include <iostream>
 using namespace std;
 
-class NewClass{
+class OldClass{
+    public:
+        virtual void hello();
+};
+
+void OldClass::hello(){
+    cout << "OldClassです\n";
+}
+
+class NewClass : public OldClass{
     public:
         void hello();
-        void hello(string name);
 };
 
 void NewClass::hello(){
-    cout << "こんにちは\n";
-}
-
-void NewClass::hello(string name){
-    cout << name << "さんこんにちは\n";
+    cout << "NewClassです\n";
 }
 
 int main (){
