@@ -1,15 +1,22 @@
 #include <iostream>
 using namespace std;
 
-void nibai(int x){
-    cout << x * 2 << "\n";
+class NewClass{
+    public:
+        void hello();
+        void hello(string name);
+};
+
+void NewClass::hello(){
+    cout << "こんにちは\n";
 }
 
-void nibai(double y){
-    cout << y * 2 << "\n";
+void NewClass::hello(string name){
+    cout << name << "さんこんにちは\n";
 }
 
 int main (){
-    nibai(3.14);
+    NewClass obj;
+    obj.hello();
     return 0;
  }
