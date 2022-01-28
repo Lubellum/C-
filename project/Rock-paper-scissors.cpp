@@ -1,13 +1,18 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <stdlib.h>
-#include <cstdlib>
-#include <time.h>
-#include <unistd.h>
+#include "header.h"
 
-int Player_Choice = 0;
-int Enemy_Choice;
-bool End = true;
+void UpData(){
+  system("reset");
+
+    printf("出したい数字を入力してください\n"
+    "1 => グー\n"
+    "2 => チョキ\n"
+    "3 => パー\n"
+    "4 => 終了\n");
+
+    scanf("%d", &Player_Choice);
+
+    rewind(stdin);
+}
 
 void Draw(){
   srand((unsigned)time(NULL));
@@ -69,23 +74,9 @@ void Draw(){
     }
 }
 
-void UpData(){
-  system("reset");
-
-    printf("出したい数字を入力してください\n"
-    "1 => グー\n"
-    "2 => チョキ\n"
-    "3 => パー\n"
-    "4 => 終了\n");
-
-    scanf("%d", &Player_Choice);
-
-    rewind(stdin);
-}
-
 int main (void){
   while (End == true){
-    Draw();
     UpData();
+    Draw();
   }
 }
