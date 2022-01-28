@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
+#include <cstdlib>
 #include <time.h>
 #include <unistd.h>
 
@@ -11,6 +12,10 @@ int main (void){
 
     rewind(stdin);
     while (End == true){
+
+        srand((unsigned)time(NULL));
+        system("reset");
+
         printf("出したい数字を入力してください\n"
         "1 => グー\n"
         "2 => チョキ\n"
@@ -18,6 +23,10 @@ int main (void){
         "4 => 終了\n");
 
         scanf("%d", &Player_Choice);
+
+        rewind(stdin);
+
+        Enemy_Choice = rand() %3 + 1;
 
         switch(Player_Choice){
           case 1:
@@ -68,6 +77,9 @@ int main (void){
           case 4:
             End = false;
             break;
+        }
+        if(Enemy_Choice != 4){
+          sleep(5);
         }
     }
 }
