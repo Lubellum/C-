@@ -78,8 +78,8 @@ int main (void){
             End = false;
             break;
         }
-        if(Enemy_Choice != 4){
-          sleep(5);
+        if(Player_Choice != 4){
+          sleep(1);
         }
     }
 }
