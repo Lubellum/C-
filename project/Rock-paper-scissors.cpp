@@ -10,7 +10,6 @@ int main (void){
     int Enemy_Choice;
     bool End = true;
 
-    rewind(stdin);
     while (End == true){
 
         srand((unsigned)time(NULL));
@@ -79,7 +78,7 @@ int main (void){
             break;
         }
         if(Player_Choice != 4){
-          sleep(1);
+          sleep(2);
         }
     }
 }
