@@ -2,8 +2,8 @@
 
 int main(void) {
   char keytype = 'b';
-  const char *player = "ああああ";
-  const char *thief = "盗賊";
+  char *player = "ああああ";
+  char *thief = "盗賊";
   short level = 5;
   float breakKeyPer = 3.2F;
   double biorhythm = 5.123L;
